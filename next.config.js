@@ -17,7 +17,7 @@ const nextConfig = {
           loader: 'file-loader',
           options: {
             outputPath: 'static/models/',
-            publicPath: '/_next/static/models/',
+            publicPath: `${isProduction ? '/portifolio' : ''}/_next/static/models/`,
             name: '[name].[hash].[ext]',
           },
         },
