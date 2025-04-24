@@ -29,8 +29,8 @@ export default function Intro() {
                   duration: 0.2,
                 }}
               >
-                <Image
-                  src="../public/me.jpg"
+                {/* <Image
+                  src="/me.jpg"
                   alt="Lucas Pacheco's portrait"
                   width="256"
                   height="256"
@@ -38,7 +38,7 @@ export default function Intro() {
                   priority={true}
                   className="h-[10.5rem] w-[10.5rem] rounded-full object-cover border-[0.35rem] border-white shadow-xl"
                   style={{ objectPosition: "center center" }}
-                />
+                /> */}
               </motion.div>
 
               <motion.span
@@ -72,9 +72,9 @@ export default function Intro() {
             and <span className="underline">efficiency</span>.
           </motion.h1>
         </div>
-        <div className="w-[400px] h-[500px] sm:w-[500px] sm:h-[600px]">
+        {/* <div className="w-[400px] h-[500px] sm:w-[500px] sm:h-[600px]">
           <ThreeDModel />
-        </div>
+        </div> */}
       </div>
     </section>
   );

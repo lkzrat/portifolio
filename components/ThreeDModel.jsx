@@ -7,7 +7,7 @@ import HeroPage from './HeroPage'
 function Model(props) {
   const group = useRef()
   // Load model
-  const { nodes, materials } = useGLTF('../public/mac-draco.glb')
+  const { nodes, materials } = useGLTF('/mac-draco.glb')
   // Make it float
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
