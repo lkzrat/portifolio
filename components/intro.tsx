@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import ThreeDModel from "./ThreeDModel";
+import MeImg from "../public/me.jpg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -21,16 +22,16 @@ export default function Intro() {
         <div className="text-center sm:text-left max-w-[50rem]">
           <div className="flex items-center justify-center">
             <div className="relative">
-              <motion.div
+                <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   type: "tween",
                   duration: 0.2,
                 }}
-              >
-                {/* <Image
-                  src="/me.jpg"
+                >
+                <Image
+                  src={MeImg}
                   alt="Lucas Pacheco's portrait"
                   width="256"
                   height="256"
@@ -38,8 +39,8 @@ export default function Intro() {
                   priority={true}
                   className="h-[10.5rem] w-[10.5rem] rounded-full object-cover border-[0.35rem] border-white shadow-xl"
                   style={{ objectPosition: "center center" }}
-                /> */}
-              </motion.div>
+                />
+                </motion.div>
 
               <motion.span
                 className="absolute bottom-0 right-0 text-4xl"
@@ -72,9 +73,9 @@ export default function Intro() {
             and <span className="underline">efficiency</span>.
           </motion.h1>
         </div>
-        {/* <div className="w-[400px] h-[500px] sm:w-[500px] sm:h-[600px]">
+        <div className="w-[400px] h-[500px] sm:w-[500px] sm:h-[600px]">
           <ThreeDModel />
-        </div> */}
+        </div>
       </div>
     </section>
   );

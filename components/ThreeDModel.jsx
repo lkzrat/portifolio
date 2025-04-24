@@ -3,11 +3,12 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Environment, useGLTF, ContactShadows, OrbitControls } from '@react-three/drei'
 import HeroPage from './HeroPage'
+import MacBook from '../public/mac-draco.glb'
 
 function Model(props) {
   const group = useRef()
   // Load model
-  const { nodes, materials } = useGLTF('/mac-draco.glb')
+  const { nodes, materials } = useGLTF(MacBook)
   // Make it float
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
