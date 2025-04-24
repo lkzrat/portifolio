@@ -13,6 +13,7 @@ const nextConfig = {
     serverActions: {},
   },
   output: 'export',
+  distDir: 'build',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/portifolio/' : '',
   basePath: '/portifolio',
 };
