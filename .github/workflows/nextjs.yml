@@ -74,11 +74,11 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
+            yarn install --frozen-lockfile --force
           elif [ -e package-lock.json ]; then
-            npm ci
+            npm ci --force
           else
-            npm i
+            npm i --force
           fi
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
