@@ -1,9 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
-import OraclyImg from "@/public/Oracly.jpeg";
-import TaskerImg from "@/public/Tasker.png";
-import CsnImg from "@/public/csn.jpeg";
+import OraclyImg from "../public/Oracly.jpeg";
+import TaskerImg from "../public/Tasker.png";
+import CsnImg from "../public/csn.jpeg";
 
 export const links = [
   {

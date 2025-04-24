@@ -4,7 +4,6 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
@@ -44,15 +43,31 @@ export default function Contact() {
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           setPending(true);
-          const { data, error } = await sendEmail(formData);
-          setPending(false);
+          try {
+            const response = await fetch("/api/send-email", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                senderEmail: formData.get("senderEmail"),
+                message: formData.get("message"),
+              }),
+            });
 
-          if (error) {
-            toast.error(error);
-            return;
+            setPending(false);
+
+            if (!response.ok) {
+              const { error } = await response.json();
+              toast.error(error || "Failed to send email");
+              return;
+            }
+
+            toast.success("Email sent successfully!");
+          } catch (error) {
+            setPending(false);
+            toast.error("An unexpected error occurred.");
           }
-
-          toast.success("Email sent successfully!");
         }}
       >
         <input
