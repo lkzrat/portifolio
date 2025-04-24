@@ -30,7 +30,7 @@ export default function Intro() {
                 }}
               >
                 <Image
-                  src="/me.jpg"
+                  src="../public/me.jpg"
                   alt="Lucas Pacheco's portrait"
                   width="256"
                   height="256"
