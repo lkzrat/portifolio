@@ -59,7 +59,7 @@ export default function Intro() {
         </div>
 
         <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xlmb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl max-w-[25rem] lg:max-w-full md:max-w-full sm:max-w-full"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         >
