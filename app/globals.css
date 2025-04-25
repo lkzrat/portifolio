@@ -13,3 +13,26 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  33% { transform: scale(1.2) rotate(120deg); }
+  66% { transform: scale(0.8) rotate(240deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 12s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}

@@ -25,12 +25,22 @@ export default function ThemeContextProvider({
       setTheme("dark");
       window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
+
+      // Safari compatibility: Force repaint for background color change
       document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color-dark');
+      document.body.style.display = "none";
+      document.body.offsetHeight; // Trigger reflow
+      document.body.style.display = "";
     } else {
       setTheme("light");
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
+
+      // Safari compatibility: Force repaint for background color change
       document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color-light');
+      document.body.style.display = "none";
+      document.body.offsetHeight; // Trigger reflow
+      document.body.style.display = "";
     }
   };
 

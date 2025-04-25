@@ -36,16 +36,16 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-wrap gap-2 mt-4">
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-sm font-medium rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transition-colors"
+                >
+                  {tag}
+                </span>
+              ))}
+          </div>
         </div>
 
         <Image

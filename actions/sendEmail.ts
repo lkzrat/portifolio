@@ -16,22 +16,20 @@ export const sendEmail = async (formData: FormData) => {
   }
 
   try {
-    const response = await fetch("https://api.resend.com/emails", {
+    const response = await fetch("/api/send-email", {
       method: "POST",
       headers: {
-        "Authorization": `Bearer ${process.env.NEXT_PUBLIC_RESEND_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "onboarding@resend.dev",
-        to: "lucasppmc@gmail.com",
-        subject: "Message from Portfolio website",
-        html: `<p>${message}</p><p>From: ${senderEmail}</p>`
+        senderEmail,
+        message,
       }),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to send email");
+      const { error } = await response.json();
+      throw new Error(error || "Failed to send email");
     }
 
     const data = await response.json();
