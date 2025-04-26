@@ -10,34 +10,38 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Lucas Pacheco | Personal Portfolio",
-  description: "Lucas is an AI Python developer and full-stack with 3+ years of experience.",
+  metadataBase: new URL("https://lkzdev.vercel.app"),
   openGraph: {
     url: "https://lkzdev.vercel.app",
-    type: "website",
     title: "Lucas Pacheco | Personal Portfolio",
     description: "Lucas is an AI Python developer and full-stack with 3+ years of experience.",
+    siteName: "Lucas Pacheco",
+    type: "website",
     images: [
       {
-        url: "https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v9/lkzdev.vercel.app/Lucas%20Pacheco%20%7C%20Personal%20Portfolio/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F3c7ba868-bf19-4fdb-a0b9-4b57dcd285f0.jpg%3Ftoken%3DuA7nqn6IZ1ZDhps1UEx0EfFIPMN1as2SgDzBwRzlsFE%26height%3D1076%26width%3D1076%26expires%3D33281625465/rgba(0%2C0%2C0%2C1)/og.png",
+        url: "https://lkzdev.vercel.app/og.png",
+        secureUrl: "https://lkzdev.vercel.app/og.png",
+        width: 1200,
+        height: 630,
         alt: "Lucas Pacheco | Personal Portfolio",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    domain: "lkzdev.vercel.app",
-    url: "https://lkzdev.vercel.app",
+    site: "@lkzdev",
     title: "Lucas Pacheco | Personal Portfolio",
     description: "Lucas is an AI Python developer and full-stack with 3+ years of experience.",
     images: [
       {
-        url: "https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v9/lkzdev.vercel.app/Lucas%20Pacheco%20%7C%20Personal%20Portfolio/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F3c7ba868-bf19-4fdb-a0b9-4b57dcd285f0.jpg%3Ftoken%3DuA7nqn6IZ1ZDhps1UEx0EfFIPMN1as2SgDzBwRzlsFE%26height%3D1076%26width%3D1076%26expires%3D33281625465/rgba(0%2C0%2C0%2C1)/og.png",
+        url: "https://lkzdev.vercel.app/og.png",
         alt: "Lucas Pacheco | Personal Portfolio",
       },
     ],
   },
 };
+
 
 export default function RootLayout({
   children,
