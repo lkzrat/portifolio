@@ -76,7 +76,10 @@ export default function Intro() {
             and <span className="underline">efficiency</span>.
           </motion.h1>
         </div>
-        <div className="w-[30rem] h-[30rem] sm:w-[40rem] sm:h-[40rem] md:w-[40rem] md:h-[40rem] lg:w-[31.25rem] lg:h-[37.5rem]">
+        <div
+          className="w-[30rem] h-[30rem] sm:w-[40rem] sm:h-[40rem] md:w-[40rem] md:h-[40rem] lg:w-[31.25rem] lg:h-[37.5rem]"
+          style={{ zIndex: 998 }}
+        >
           <ThreeDModel />
         </div>
       </div>

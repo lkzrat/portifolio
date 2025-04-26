@@ -104,7 +104,7 @@ export default function Contact() {
         <div className="relative">
           <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500" />
           <input
-          className="w-full pl-12 pr-6 py-4 bg-white/50 dark:bg-gray-700/30 rounded-xl border border-white/20 dark:border-gray-600/50 focus:outline-none focus:ring-2 focus:ring-purple-500/30 placeholder-gray-400 dark:placeholder-gray-500 transition-all"
+          className="w-full pl-12 pr-6 py-3 sm:py-4 bg-white/50 dark:bg-gray-700/30 rounded-xl border border-white/20 dark:border-gray-600/50 focus:outline-none focus:ring-2 focus:ring-purple-500/30 placeholder-gray-400 dark:placeholder-gray-500 transition-all text-sm sm:text-base"
           name="senderEmail"
           type="email"
           required
@@ -122,7 +122,7 @@ export default function Contact() {
         <div className="relative">
           <FiMessageSquare className="absolute left-4 top-6 -translate-y-1/2 text-gray-400 dark:text-gray-500" />
           <textarea
-          className="w-full pl-12 pr-6 py-4 bg-white/50 dark:bg-gray-700/30 rounded-xl border border-white/20 dark:border-gray-600/50 focus:outline-none focus:ring-2 focus:ring-purple-500/30 placeholder-gray-400 dark:placeholder-gray-500 transition-all min-h-[150px]"
+          className="w-full pl-12 pr-6 py-3 sm:py-4 bg-white/50 dark:bg-gray-700/30 rounded-xl border border-white/20 dark:border-gray-600/50 focus:outline-none focus:ring-2 focus:ring-purple-500/30 placeholder-gray-400 dark:placeholder-gray-500 transition-all text-sm sm:text-base min-h-[100px] sm:min-h-[150px]"
           name="message"
           placeholder="Compose your message..."
           required

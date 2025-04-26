@@ -28,12 +28,13 @@ export default function Header() {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Link
+                <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "flex w-full items-center justify-center px-3 py-3 transition bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 hover:text-black dark:hover:text-white",
                   {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
+                  "text-gray-950 dark:text-white":
+                  activeSection === link.name,
+                  "text-white": activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -41,21 +42,21 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
-              >
+                >
                 {link.name}
 
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
+                  className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-full absolute inset-0 -z-10"
+                  layoutId="activeSection"
+                  transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                  }}
                   ></motion.span>
                 )}
-              </Link>
+                </Link>
             </motion.li>
           ))}
         </ul>
