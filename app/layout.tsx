@@ -19,8 +19,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://lkzdev.vercel.app/og.png",
-        secureUrl: "https://lkzdev.vercel.app/og.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Lucas Pacheco | Personal Portfolio",
@@ -33,12 +32,7 @@ export const metadata = {
     site: "@lkzdev",
     title: "Lucas Pacheco | Personal Portfolio",
     description: "Lucas is an AI Python developer and full-stack with 3+ years of experience.",
-    images: [
-      {
-        url: "https://lkzdev.vercel.app/og.png",
-        alt: "Lucas Pacheco | Personal Portfolio",
-      },
-    ],
+    images: ["/og.png"],
   },
 };
 
